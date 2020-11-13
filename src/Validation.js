@@ -1,4 +1,3 @@
-// Here goes the schema for the form
 import * as yup from "yup";
 
 export default yup.object().shape({
@@ -19,12 +18,4 @@ export default yup.object().shape({
         .boolean(),
     instructions: yup
         .string(),
-
-//   password: yup
-//     .string()
-//     .required("Password is required.")
-//     .min(3, "Password must be 3 chars long."),
-//   terms: yup
-//     .boolean()
-//     .oneOf([true], "Field must be checked"),
 });

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function Form(props) {
@@ -37,7 +37,6 @@ export default function Form(props) {
 
         <div name="errors" className='errors'>
           <div name="nameError">{errors.name}</div>
-          {/* <div name="sizeError">{errors.email}</div> */}
         </div>
       </div>
 
@@ -67,7 +66,6 @@ export default function Form(props) {
           </select>
         </label>
 
-        {/* THIS DIV STYLING */}
         <div className='form-group checkboxes'>
             <h4>Toppings</h4>
             <label>Pepperoni
