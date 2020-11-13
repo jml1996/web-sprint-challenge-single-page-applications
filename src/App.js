@@ -46,9 +46,6 @@ export default function App() {
     getUsers();
   }, []);
 
-
-  // console.log(users);
-
   const postNewOrder = (newOrder) => {
     axios
       .post("https://reqres.in/api/users", newOrder)
