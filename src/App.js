@@ -113,6 +113,16 @@ export default function App() {
     <div>
       <Switch>
         <Route path="/pizza">
+          <nav>
+            <ul>
+              <Link to={"/pizza"} style={{ color: "black", textDecoration: 'none' }}>
+                  <li>Place Order</li>
+              </Link>
+              <Link to={"/"} style={{ color: "black", textDecoration: 'none' }}>
+                  <li>Home</li>
+              </Link>
+            </ul> 
+          </nav>
           <Form
             values={formValues}
             change={changeIt}
@@ -123,12 +133,20 @@ export default function App() {
         </Route>
         <Route path="/">
           <nav>
-            <Link to={"/pizza"} style={{ color: "black", textDecoration: 'none' }}>
-                <h2>Place your order.</h2>
-            </Link>      
+            <ul>
+              <Link to={"/pizza"} style={{ color: "black", textDecoration: 'none' }}>
+                  <li>Place Order</li>
+              </Link>
+              <Link to={"/"} style={{ color: "black", textDecoration: 'none' }}>
+                  <li>Home</li>
+              </Link>
+            </ul> 
           </nav>
+          <div className="hometext">
+            <h2>Active Orders:</h2>
+          </div>
           {
-            orders.length === 0 ? null : orders.map((order) => {
+            orders.length === 0 ? <div className="none">None — select "Place Order" to place order.</div> : orders.map((order) => {
               console.log(order);
               return <HomeOrders key={order.id} details={order} />
             })

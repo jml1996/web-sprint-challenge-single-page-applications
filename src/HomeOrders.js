@@ -12,7 +12,7 @@ export default function HomeOrders({ details }) {
         <p name="cardSize">Size: {details.size}</p>
         {
           !!details.toppings && !!details.toppings.length &&
-          <div>
+          <div name="cardToppings">
             Toppings:
             <ul>
               {details.toppings.map((sel, idx) => <li key={idx}>{sel}</li>)}

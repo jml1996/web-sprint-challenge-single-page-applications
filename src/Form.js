@@ -30,9 +30,10 @@ export default function Form(props) {
       <div className='form-group submit'>
         <h2>Add an Order</h2>
         <Link to="/">
-            Go back home/see orders.
+            Go back home to see orders.
         </Link>
-            <button name="disabledButt" disabled={disabled}>submit</button>
+        <br></br><br></br>
+        <button name="disabledButt" disabled={disabled}>submit</button>
 
         <div name="errors" className='errors'>
           <div name="nameError">{errors.name}</div>
@@ -90,6 +91,14 @@ export default function Form(props) {
                     type="checkbox"
                     name="onions"
                     checked={values.onions}
+                    onChange={formChange}
+                />
+            </label>
+            <label>Peppers
+                <input
+                    type="checkbox"
+                    name="peppers"
+                    checked={values.peppers}
                     onChange={formChange}
                 />
             </label>
