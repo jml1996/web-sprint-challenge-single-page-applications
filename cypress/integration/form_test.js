@@ -77,7 +77,6 @@ describe('Form app', () => {
             .type("Extra cheese")
 
         cy.get("button[name='disabledButt']").click()
-        cy.visit('http://localhost:3000/')
 
         // We were never instructed about how to run a POST
         // request with cypress. I'm going to assume that this
